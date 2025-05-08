@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Obra App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #030373;
+            font-family: 'Poppins', sans-serif;
+            color: #000;
+        }
+
+        header {
+            background-color: #170061;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        nav {
+            background-color: #281b82;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 40px;
+            background-color: #ffe099;
+            border-radius: 10px;
+        }
+
+        .login-form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-family: 'Roboto Slab', serif;
+            color: #000;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        input[type="email"],
+        input[type="password"],
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .forgot-password {
+            text-align: right;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+
+        .forgot-password a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 25px;
+            background-color: #170061;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #3a26a7;
+        }
+
+        footer {
+            background-color: #170061;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Obra App</h1>
+    </header>
+
+    <nav>
+        <a href="#login">Login</a>
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <!-- LOGIN -->
+    <section id="login">
+        <h2>Login</h2>
+        <form class="login-form" action="/login" method="POST">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" required>
+
+            <div class="forgot-password">
+                <a href="/esqueci-senha">Esqueci minha senha</a>
+            </div>
+
+            <button type="submit">Entrar</button>
+        </form>
+    </section>
+
+    <!-- INÍCIO -->
+    <section id="inicio">
+        <h2>Bem-vindo ao Obra App</h2>
+        <p>Nossa missão é transformar a forma como os serviços são contratados, proporcionando uma conexão rápida, segura e eficiente entre clientes e profissionais especializados, com foco na qualidade e na confiança.</p>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre">
+        <h2>Sobre a Empresa</h2>
+        <p>Somos especialistas em soluções tecnológicas para o setor da construção civil. Visamos por revolucionar a forma como clientes e profissionais se conectam, tornanado o setor mais digital, transparente e acessível para todos.
+
+    <!-- CONTATO -->
+    <section id="contato">
+        <h2>Fale Conosco</h2>
+        <form action="/contato" method="POST">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email-contato">E-mail</label>
+            <input type="email" id="email-contato" name="email" required>
+
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Obra App. Todos os direitos reservados.</p>
+        <p>contato@obraapp.com | (11) 99999-9999</p>
+    </footer>
+
+</body>
+</html>
